@@ -1,78 +1,130 @@
-node-prettydate
-===============
+<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#human-pretty-date)
 
-format old JavaScript dates in a “pretty” way. ex : 2 hours ago , 3 minutes ago
+# ➤ Human Pretty Date
 
-inspired by the John Resig Pretty Date plugin for jQuery (http://ejohn.org/blog/javascript-pretty-date/)
+**human-pretty-date** is a Javascript library that helps you collect common and not-so-common informations about your application user.
+   
 
 
-## Usage
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#installation)
 
-`npm install pretty-date`
+## ➤ Installation
 
-```javascript
-var prettydate = require("pretty-date");
-console.log(prettydate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET)")));
+Use the package manager [npm](https://www.npmjs.com/) to install **human-pretty-date**.
+
+```bash
+npm i human-pretty-date --save
 ```
 
-## Examples
-```javascript
-var prettydate = require("pretty-date");
 
-console.log( prettydate.format( new Date( new Date() - -2*365*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -365*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*30*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -30*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*1000 )));
-console.log( prettydate.format( new Date( new Date() - -1*1000 )));
-console.log( prettydate.format( new Date()));
-console.log( prettydate.format( new Date( new Date() - 1*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*1000 )));
-console.log( prettydate.format( new Date( new Date() - 60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 30*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*30*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 365*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*365*24*60*60*1000 )));
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#usage)
 
-/* outputs
-* 2 years from now
-* 1 year from now
-* 2 months from now
-* 1 month from now
-* 2 days from now
-* tomorrow
-* 2 hours from now
-* 1 hour from now
-* 2 minutes from now
-* 1 minute from now
-* 2 seconds from now
-* 1 second from now
-* just now
-* 1 second ago
-* 2 seconds ago
-* 1 minute ago
-* 2 minutes ago
-* 1 hour ago
-* 2 hours ago
-* yesterday
-* 2 days ago
-* 1 month ago
-* 2 months ago
-* 1 year ago
-* 2 years ago
-*/
+## ➤ Usage
+
+If you are using **human-pretty-date** with Typescript, you can import the package with the import sintax
+
+```typescript
+import * as humanPrettyDate from 'human-pretty-date';
 ```
 
-## Contributions
-feel free to fork and add features , fix bugs and your pull request is more than welcome
+The usage will be like this:
+
+```javascript
+console.log(formatDate(new Date(new Date() - -2 * 365 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -365 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -2 * 30 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -30 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -2 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -2 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -2 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - -60 * 1000)));
+console.log(formatDate(new Date(new Date() - -2 * 1000)));
+console.log(formatDate(new Date(new Date() - -1 * 1000)));
+console.log(formatDate(new Date()));
+console.log(formatDate(new Date(new Date() - 1 * 1000)));
+console.log(formatDate(new Date(new Date() - 2 * 1000)));
+console.log(formatDate(new Date(new Date() - 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 2 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 2 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 2 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 30 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 2 * 30 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 365 * 24 * 60 * 60 * 1000)));
+console.log(formatDate(new Date(new Date() - 2 * 365 * 24 * 60 * 60 * 1000)));
+```
+
+This is the complete output:
+
+```
+2 years from now
+1 year from now
+2 month from now
+1 months from now
+2 day from now
+tomorrow
+2 hours from now
+1 hour from now
+2 minutes from now
+1 minute from now
+2 seconds from now
+1 second from now
+just now
+1 second ago
+2 seconds ago
+1 minute ago
+2 minutes ago
+1 hour ago
+2 hours ago
+yesterday
+2 day ago
+1 months ago
+2 month ago
+1 year ago
+2 years ago
+```
+
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#i18n)
+
+## ➤ i18n
+To use the i18n provided by the package, you just need to past the desired locale in the config object:
+
+```javascript
+console.log(formatDate(new Date(), { locale: 'pt_BR' })); // agora
+```
+### H3
+
+| Code          | Locale           
+| ------------- |:-------------:
+| en     | English
+| pt_BR      | Portuguese (Brazil)       
+
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#contributors)
+
+## ➤ Contributors
+	
+
+| [<img alt="Caio Rolla" src="https://avatars0.githubusercontent.com/u/25801532?s=460&u=7c8427b4390269cad8de8cb27b872c5098e41ae2&v=4" width="100">](https://twitter.com/caio_rolla) |
+|:--------------------------------------------------:|
+| [Caio Rolla](https://twitter.com/caio_rolla)     |
+| [caio.cesar.rolla@gmail.com](mailto:caio.cesar.rolla@gmail.com) |
+| You don't need state management if you use global variables. :bug: |
+
+
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#contributing)
+
+## ➤ Contributing
+Pull requests are welcome, specially for new locales. For major changes, please open an issue first to discuss what you would like to change.
+
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#license)
+
+## ➤ License
+[MIT](https://choosealicense.com/licenses/mit/)
