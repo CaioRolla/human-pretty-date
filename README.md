@@ -3,7 +3,7 @@
 
 # ➤ Human Pretty Date
 
-**human-pretty-date** is a Javascript library that helps you collect common and not-so-common informations about your application user.
+**human-pretty-date** helps you display readable pretty dates for your users.
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#installation)
