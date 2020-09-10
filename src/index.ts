@@ -46,11 +46,11 @@ const formatters = [
 	{ threshold: Infinity, handler: createHandler(31536000, Period.YEAR, Tense.AGO) }
 ];
 
-export const formatDate = (date: Date, config: Partial<FormatDateConfig> | undefined) => {
+export const formatDate = (date: Date, config?: Partial<FormatDateConfig> | undefined) => {
 	var diff = (((new Date()).getTime() - date.getTime()) / 1000);
 	for (var i = 0; i < formatters.length; i++) {
 		if (diff < formatters[i].threshold) {
-			return formatters[i].handler(diff, config && config.locale ? config.locale : Locale.EN);
+			return formatters[i].handler(diff, config && config.locale && Object.values(Locale).includes(config.locale) ? config.locale : Locale.EN);
 		}
 	}
 	throw new Error("exhausted all formatter options, none found"); //should never be reached
