@@ -1,18 +1,44 @@
 {
-  "name": "pretty-date",
-  "version": "0.2.0",
-  "description": "format old JavaScript dates in a “pretty” way. ex : 2 hours ago , 3 minutes ago",
-  "main": "index.js",  
+  "name": "human-pretty-date",
+  "version": "1.0.0",
+  "description": "Format dates for humans",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && webpack",
+    "example": "npm run build && node ./examples/example.js",
+    "build-readme": "npx @appnest/readme generate"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/netcode/node-prettydate.git"
+    "url": "https://github.com/CaioRolla/human-pretty-date"
   },
-  "keywords": [
-    "date"
-  ],
-  "author": "netcode",
+  "author": "CaioRolla",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/netcode/node-prettydate/issues"
-  }
+    "url": "https://github.com/CaioRolla/human-pretty-date/issues"
+  },
+  "keywords": [
+    "date",
+    "pretty",
+    "human date",
+    "formatted date",
+    "localization"
+  ],
+  "contributors": [
+    {
+      "name": "Caio Rolla",
+      "email": "caio.cesar.rolla@gmail.com",
+      "url": "https://twitter.com/caio_rolla",
+      "img": "https://avatars0.githubusercontent.com/u/25801532?s=460&u=7c8427b4390269cad8de8cb27b872c5098e41ae2&v=4",
+      "info": [
+        "You don't need state management if you use global variables. :bug:"
+      ]
+    }
+  ],
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
 }
