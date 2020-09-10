@@ -4,7 +4,6 @@
 # ➤ Human Pretty Date
 
 **human-pretty-date** is a Javascript library that helps you collect common and not-so-common informations about your application user.
-   
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#installation)
@@ -128,3 +127,5 @@ Pull requests are welcome, specially for new locales. For major changes, please 
 
 ## ➤ License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+This package is based on [node-prettydate](https://github.com/netcode/node-prettydate)
