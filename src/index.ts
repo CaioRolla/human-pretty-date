@@ -1,4 +1,5 @@
-import { FormatDateConfig, Locale, Period, Tense, translatedPeriod, translatedTense } from "./types";
+import { FormatDateConfig, Locale, Period, Tense, translatedPeriod, translatedTense } from './types';
+export * from './types';
 
 const enHandler = (number: number, period: Period, tense: Tense, pluralized: boolean): string => {
 	return `${number} ${translatedPeriod(period, Locale.EN, pluralized)} ${translatedTense(tense, Locale.EN)}`

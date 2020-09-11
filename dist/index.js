@@ -1,6 +1,10 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
 var types_1 = require("./types");
+__export(require("./types"));
 var enHandler = function (number, period, tense, pluralized) {
     return number + " " + types_1.translatedPeriod(period, types_1.Locale.EN, pluralized) + " " + types_1.translatedTense(tense, types_1.Locale.EN);
 };
@@ -44,7 +48,7 @@ exports.formatDate = function (date, config) {
     var diff = (((new Date()).getTime() - date.getTime()) / 1000);
     for (var i = 0; i < formatters.length; i++) {
         if (diff < formatters[i].threshold) {
-            return formatters[i].handler(diff, config && config.locale ? config.locale : types_1.Locale.EN);
+            return formatters[i].handler(diff, config && config.locale && Object.values(types_1.Locale).includes(config.locale) ? config.locale : types_1.Locale.EN);
         }
     }
     throw new Error("exhausted all formatter options, none found"); //should never be reached
