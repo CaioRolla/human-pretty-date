@@ -96,9 +96,7 @@ console.log(formatDate(new Date(), { locale: 'pt_BR' })); // agora
 | [<img alt="Caio Rolla" src="https://avatars0.githubusercontent.com/u/25801532?s=460&u=7c8427b4390269cad8de8cb27b872c5098e41ae2&v=4" width="100">](https://twitter.com/caio_rolla) |
 |:--------------------------------------------------:|
 | [Caio Rolla](https://twitter.com/caio_rolla)     |
-| [![Linkedin Badge](https://img.shields.io/badge/-Caio%20Rolla-0072b1?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/caio-rolla/ "Connect on LinkedIn")
-[![Twitter Badge](https://img.shields.io/badge/-@caio_rolla-00acee?style=flat&logo=Twitter&logoColor=white)](https://twitter.com/intent/follow?screen_name=caio_rolla "Follow on Twitter")
-![Profile Views](https://komarev.com/ghpvc/?username=CaioRolla&color=blue) |
+| [![Linkedin Badge](https://img.shields.io/badge/-Caio%20Rolla-0072b1?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/caio-rolla/ "Connect on LinkedIn") [![Twitter Badge](https://img.shields.io/badge/-@caio_rolla-00acee?style=flat&logo=Twitter&logoColor=white)](https://twitter.com/intent/follow?screen_name=caio_rolla "Follow on Twitter") ![Profile Views](https://komarev.com/ghpvc/?username=CaioRolla&color=blue) |
 | You don't need state management if you use global variables. :bug: |
 
 ## Contributing
