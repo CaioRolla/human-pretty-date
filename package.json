@@ -1,6 +1,6 @@
 {
   "name": "human-pretty-date",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Format dates for humans",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
